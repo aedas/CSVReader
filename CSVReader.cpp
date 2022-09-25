@@ -21,7 +21,8 @@ CSVReader::~CSVReader() {
 
 int CSVReader::read(std::string path) {
 	std::string line;
-	std::ifstream target (path);
+	std::ifstream target;
+	target.open(path);
 	int i = 0;
 	if (target.is_open()) {
 		while (std::getline(target, line) )
@@ -32,6 +33,7 @@ int CSVReader::read(std::string path) {
 		target.close();
 		return 0;
 	}
+	std::cout << path << std::endl;
 	return 1;
 }
 

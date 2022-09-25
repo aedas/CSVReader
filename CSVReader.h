@@ -8,6 +8,8 @@
 #include <vector>
 #include <string>
 
+#define PATH_MAX 256
+
 
 #ifndef CSVREADER_H_
 #define CSVREADER_H_
